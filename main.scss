@@ -1,0 +1,82 @@
+// ---------------------------------- PALETTE OF COLORS
+
+$lighter-color: #dfedf2;
+$darker-color: #011526;
+$main-colo1: #038c8c;
+$main-color2: #026873;
+$main-color3: #013440;
+
+// ---------------------------------- FONTS
+
+@font-face {
+    font-family: Rubik;
+    src: url("Fonts/Rubik/Rubik-VariableFont_wght.ttf");
+  }
+
+// ---------------------------------- MULTI PLATFORM TEMPLATE
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+// ---------------------------------- PAGE STYLING
+
+body {
+  margin: 0;
+  background-color: $lighter-color;
+  color: $darker-color;
+  font-family: Rubik;
+}
+
+// ---------------------------------- NAVIGATION BAR __ MOBILE
+
+.mobile-nav {
+  @include display-flex();
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: $main-colo1;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.nav-menu__bars {
+  @include display-flex();
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.nav-menu__bar {
+  height: 3px;
+  width: 100%;
+  background-color: $main-color3;
+  border-radius: 25px;
+}
+
+// ---------------------------------- TITLE
+
+.title {
+
+    margin-top: 6rem;
+    
+    h1 {
+        font-size: 1.9rem;
+        margin: 1.5rem 5px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin: 1.5rem 5px;
+        color: $main-color2;
+    }
+
+}

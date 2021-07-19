@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Rubik;
+  src: url("Fonts/Rubik/Rubik-VariableFont_wght.ttf");
+}
+body {
+  margin: 0;
+  background-color: #dfedf2;
+  color: #011526;
+  font-family: Rubik;
+}
+
+.mobile-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: #038c8c;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.nav-menu__bars {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.nav-menu__bar {
+  height: 3px;
+  width: 100%;
+  background-color: #013440;
+  border-radius: 25px;
+}
+
+.title {
+  margin-top: 6rem;
+}
+.title h1 {
+  font-size: 1.9rem;
+  margin: 1.5rem 5px;
+}
+.title h2 {
+  font-size: 1.4rem;
+  margin: 1.5rem 5px;
+  color: #026873;
+}
+
+/*# sourceMappingURL=main.css.map */
