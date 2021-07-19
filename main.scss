@@ -9,9 +9,9 @@ $main-color3: #013440;
 // ---------------------------------- FONTS
 
 @font-face {
-    font-family: Rubik;
-    src: url("Fonts/Rubik/Rubik-VariableFont_wght.ttf");
-  }
+  font-family: Rubik;
+  src: url("Fonts/Rubik/Rubik-VariableFont_wght.ttf");
+}
 
 // ---------------------------------- MULTI PLATFORM TEMPLATE
 
@@ -24,11 +24,16 @@ $main-color3: #013440;
 
 // ---------------------------------- PAGE STYLING
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: $lighter-color;
   color: $darker-color;
   font-family: Rubik;
+  scroll-behavior: smooth;
 }
 
 // ---------------------------------- NAVIGATION BAR __ MOBILE
@@ -44,6 +49,7 @@ body {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .nav-menu__bars {
@@ -59,24 +65,58 @@ body {
   height: 3px;
   width: 100%;
   background-color: $main-color3;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 // ---------------------------------- TITLE
 
 .title {
+  margin-top: 6rem;
 
-    margin-top: 6rem;
-    
-    h1 {
-        font-size: 1.9rem;
-        margin: 1.5rem 5px;
-    }
+  h1 {
+    text-align: center;
+    font-size: clamp(1.2rem, 8vw, 3rem);
+    margin: 1.5rem 0;
+  }
 
-    h2 {
-        font-size: 1.4rem;
-        margin: 1.5rem 5px;
-        color: $main-color2;
-    }
+  h2 {
+    text-align: center;
+    font-size: clamp(1rem, 7vw, 2.5rem);
+    margin: 2rem 0;
+    color: $main-color2;
+  }
+}
 
+// ---------------------------------- MAIN IMAGE
+
+.main-image {
+  width: clamp(5rem, 75vw, 20rem);
+  border-radius: 50%;
+  margin: 4rem auto;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    box-shadow: 0 2px 8px$darker-color;
+  }
+}
+
+// ---------------------------------- CONTACTS
+
+footer {
+
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: #013440;
+  color: #dfedf2;
+  font-weight: bold;
+
+  p {
+    text-align: center;
+    padding: 0.7rem 0;
+    margin: 0;
+    font-size: 0.8rem;
+    overflow: hidden;
+  }
 }

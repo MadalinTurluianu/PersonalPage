@@ -2,11 +2,16 @@
   font-family: Rubik;
   src: url("Fonts/Rubik/Rubik-VariableFont_wght.ttf");
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #dfedf2;
   color: #011526;
   font-family: Rubik;
+  scroll-behavior: smooth;
 }
 
 .mobile-nav {
@@ -23,6 +28,7 @@ body {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .nav-menu__bars {
@@ -41,20 +47,49 @@ body {
   height: 3px;
   width: 100%;
   background-color: #013440;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .title {
   margin-top: 6rem;
 }
 .title h1 {
-  font-size: 1.9rem;
-  margin: 1.5rem 5px;
+  text-align: center;
+  font-size: clamp(1.2rem, 8vw, 3rem);
+  margin: 1.5rem 0;
 }
 .title h2 {
-  font-size: 1.4rem;
-  margin: 1.5rem 5px;
+  text-align: center;
+  font-size: clamp(1rem, 7vw, 2.5rem);
+  margin: 2rem 0;
   color: #026873;
+}
+
+.main-image {
+  width: clamp(5rem, 75vw, 20rem);
+  border-radius: 50%;
+  margin: 4rem auto;
+  overflow: hidden;
+}
+.main-image img {
+  width: 100%;
+  box-shadow: 0 2px 8px #011526;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: #013440;
+  color: #dfedf2;
+  font-weight: bold;
+}
+footer p {
+  text-align: center;
+  padding: 0.7rem 0;
+  margin: 0;
+  font-size: 0.8rem;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
