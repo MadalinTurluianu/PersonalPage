@@ -217,14 +217,6 @@ footer {
   color: $lighter-color;
   font-weight: bold;
 
-  p {
-    text-align: center;
-    padding: 0.7rem 0;
-    margin: 0;
-    font-size: clamp(0.6rem, 4vw, 1rem);
-    overflow: hidden;
-  }
-
   a {
     display: block;
     text-align: center;

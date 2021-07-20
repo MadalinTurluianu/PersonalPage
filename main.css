@@ -163,13 +163,6 @@ footer {
   color: #dfedf2;
   font-weight: bold;
 }
-footer p {
-  text-align: center;
-  padding: 0.7rem 0;
-  margin: 0;
-  font-size: clamp(0.6rem, 4vw, 1rem);
-  overflow: hidden;
-}
 footer a {
   display: block;
   text-align: center;
