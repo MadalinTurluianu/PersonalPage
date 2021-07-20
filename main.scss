@@ -68,16 +68,10 @@ body {
   border-radius: 20px;
 }
 
-// ---------------------------------- CONTENT SCROLL BEHAVIOR
-
-.content {
-  height: 100vh;
-}
-
 // ---------------------------------- MAIN
 
 .title {
-  padding-top: 5rem;
+  padding-top: 4rem;
 
   h1 {
     text-align: center;
@@ -96,7 +90,7 @@ body {
 .main-image {
   width: clamp(5rem, 75vw, 20rem);
   border-radius: 50%;
-  margin: 4rem auto;
+  margin: 4rem auto 0 auto;
   overflow: hidden;
 
   img {
@@ -108,7 +102,7 @@ body {
 // ---------------------------------- SECTIONS
 
 section h2 {
-  padding-top: 4rem;
+  padding-top: 5rem;
   margin: 0;
   text-align: center;
   color: $main-color2;
@@ -131,11 +125,49 @@ section h2 {
     width: clamp(5rem, 75vw, 20rem);
     height: clamp(5rem, 75vw, 20rem);
     margin: auto;
+    margin-top: 3rem;
     border-radius: 50%;
     background-color: $main-color2;
     text-align: center;
   }
 }
+
+// ---------------------------------- SKILLS
+
+.icons-container {
+  @include display-flex();
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.icon-container {
+  position: relative;
+  width: clamp(3rem, 15vw, 8rem);
+  height: clamp(3rem, 15vw, 8rem);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mini-icon {
+    position: absolute;
+    transform: translate(clamp(1rem, 2.6vw, 3rem), clamp(-1rem, -2.6vw, -3rem));
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.languages h2 {
+  padding-top: 1rem;
+}
+
+// ---------------------------------- PROJECTS
+
+
 
 // ---------------------------------- CONTACTS
 
