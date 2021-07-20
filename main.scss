@@ -33,7 +33,6 @@ body {
   background-color: $lighter-color;
   color: $darker-color;
   font-family: Rubik;
-  scroll-behavior: smooth;
 }
 
 // ---------------------------------- NAVIGATION BAR __ MOBILE
@@ -43,8 +42,9 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: -0.5rem;
-  right: -0.5rem;
+  top: 0;
+  right: 0;
+  transform: translate(0.4rem, -0.4rem);
   background-color: $main-color1;
   width: 3.5rem;
   height: 3.5rem;
@@ -68,10 +68,16 @@ body {
   border-radius: 20px;
 }
 
-// ---------------------------------- TITLE
+// ---------------------------------- CONTENT SCROLL BEHAVIOR
+
+.content {
+  height: 100vh;
+}
+
+// ---------------------------------- MAIN
 
 .title {
-  margin-top: 6rem;
+  padding-top: 5rem;
 
   h1 {
     text-align: center;
@@ -87,8 +93,6 @@ body {
   }
 }
 
-// ---------------------------------- MAIN IMAGE
-
 .main-image {
   width: clamp(5rem, 75vw, 20rem);
   border-radius: 50%;
@@ -101,13 +105,44 @@ body {
   }
 }
 
+// ---------------------------------- SECTIONS
+
+section h2 {
+  padding-top: 4rem;
+  margin: 0;
+  text-align: center;
+  color: $main-color2;
+  font-size: clamp(1rem, 7vw, 2.5rem);
+}
+
+// ---------------------------------- ABOUT SECTION
+
+
+.about {
+
+  p {
+    margin: 2rem 0.9rem;
+    text-align: justify;
+    color: $main-color3;
+    font-size: clamp(0.8rem, 4.5vw, 1rem);
+  }
+
+  .img-container {
+    width: clamp(5rem, 75vw, 20rem);
+    height: clamp(5rem, 75vw, 20rem);
+    margin: auto;
+    border-radius: 50%;
+    background-color: $main-color2;
+    text-align: center;
+  }
+}
+
 // ---------------------------------- CONTACTS
 
 footer {
-
-  position: absolute;
+  position: relative;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   background-color: $main-color2;
   color: $lighter-color;
   font-weight: bold;

@@ -11,7 +11,6 @@ body {
   background-color: #dfedf2;
   color: #011526;
   font-family: Rubik;
-  scroll-behavior: smooth;
 }
 
 .mobile-nav {
@@ -22,8 +21,9 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: -0.5rem;
-  right: -0.5rem;
+  top: 0;
+  right: 0;
+  transform: translate(0.4rem, -0.4rem);
   background-color: #038c8c;
   width: 3.5rem;
   height: 3.5rem;
@@ -50,8 +50,12 @@ body {
   border-radius: 20px;
 }
 
+.content {
+  height: 100vh;
+}
+
 .title {
-  margin-top: 6rem;
+  padding-top: 5rem;
 }
 .title h1 {
   text-align: center;
@@ -76,10 +80,33 @@ body {
   box-shadow: 0 2px 8px #011526;
 }
 
+section h2 {
+  padding-top: 4rem;
+  margin: 0;
+  text-align: center;
+  color: #026873;
+  font-size: clamp(1rem, 7vw, 2.5rem);
+}
+
+.about p {
+  margin: 2rem 0.9rem;
+  text-align: justify;
+  color: #013440;
+  font-size: clamp(0.8rem, 4.5vw, 1rem);
+}
+.about .img-container {
+  width: clamp(5rem, 75vw, 20rem);
+  height: clamp(5rem, 75vw, 20rem);
+  margin: auto;
+  border-radius: 50%;
+  background-color: #026873;
+  text-align: center;
+}
+
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #026873;
   color: #dfedf2;
   font-weight: bold;
