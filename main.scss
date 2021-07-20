@@ -6,6 +6,11 @@ $main-color1: #038c8c;
 $main-color2: #026873;
 $main-color3: #013440;
 
+
+// ---------------------------------- MEASURE
+
+$mobile-img__diameter: clamp(5rem, 60vw, 20rem);
+
 // ---------------------------------- FONTS
 
 @font-face {
@@ -44,7 +49,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translate(0.4rem, -0.4rem);
+  transform: translate(0.5rem, -0.5rem);
   background-color: $main-color1;
   width: 3.5rem;
   height: 3.5rem;
@@ -70,32 +75,34 @@ body {
 
 // ---------------------------------- MAIN
 
-.title {
-  padding-top: 4rem;
-
-  h1 {
-    text-align: center;
-    font-size: clamp(1.2rem, 8vw, 3rem);
-    margin: 1.5rem 0;
+#home {
+  .title {
+    padding-top: 4rem;
+  
+    h1 {
+      text-align: center;
+      font-size: clamp(1.2rem, 8vw, 3rem);
+      margin: 1.5rem 0;
+    }
+  
+    h2 {
+      text-align: center;
+      font-size: clamp(1rem, 7vw, 2.5rem);
+      margin: 2rem 0;
+      color: $main-color2;
+    }
   }
-
-  h2 {
-    text-align: center;
-    font-size: clamp(1rem, 7vw, 2.5rem);
-    margin: 2rem 0;
-    color: $main-color2;
-  }
-}
-
-.main-image {
-  width: clamp(5rem, 75vw, 20rem);
-  border-radius: 50%;
-  margin: 4rem auto 0 auto;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    box-shadow: 0 2px 8px$darker-color;
+  
+  .main-image {
+    width: $mobile-img__diameter;
+    border-radius: 50%;
+    margin: 4rem auto 0 auto;
+    overflow: hidden;
+  
+    img {
+      width: 100%;
+      box-shadow: 0 2px 8px$darker-color;
+    }
   }
 }
 
@@ -109,69 +116,100 @@ section h2 {
   font-size: clamp(1rem, 7vw, 2.5rem);
 }
 
-// ---------------------------------- ABOUT SECTION
+// ---------------------------------- ABOUT 
 
 
-.about {
+#about {
 
   p {
-    margin: 2rem 0.9rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
     text-align: justify;
     color: $main-color3;
     font-size: clamp(0.8rem, 4.5vw, 1rem);
+    max-width: 50rem;
   }
 
   .img-container {
-    width: clamp(5rem, 75vw, 20rem);
-    height: clamp(5rem, 75vw, 20rem);
+    width: $mobile-img__diameter;
+    height: $mobile-img__diameter;
     margin: auto;
     margin-top: 3rem;
     border-radius: 50%;
     background-color: $main-color2;
     text-align: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
 // ---------------------------------- SKILLS
 
-.icons-container {
-  @include display-flex();
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem 0;
-}
+#skills {
+  .icons-container {
+    @include display-flex();
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .icon-container {
+    position: relative;
+    width: clamp(3rem, 15vw, 8rem);
+    height: clamp(3rem, 15vw, 8rem);
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .mini-icon {
+      position: absolute;
+      transform: translate(clamp(1rem, 2.6vw, 3rem), clamp(-1rem, -2.6vw, -3rem));
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 50%;
+    }
 
-.icon-container {
-  position: relative;
-  width: clamp(3rem, 15vw, 8rem);
-  height: clamp(3rem, 15vw, 8rem);
 
-  img {
-    width: 100%;
-    height: 100%;
+  }
+  
+  .languages h2 {
+    padding-top: 1rem;
   }
 
-  .mini-icon {
-    position: absolute;
-    transform: translate(clamp(1rem, 2.6vw, 3rem), clamp(-1rem, -2.6vw, -3rem));
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
+  h2 {
+    margin-bottom: 2.5rem;
   }
-}
-
-.languages h2 {
-  padding-top: 1rem;
 }
 
 // ---------------------------------- PROJECTS
 
+#projects {
 
+  .project {
+    margin: 3rem auto;
+    width: $mobile-img__diameter;
+    height: $mobile-img__diameter;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
 // ---------------------------------- CONTACTS
 
 footer {
+  @include display-flex();
+  flex-direction: column;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -185,5 +223,16 @@ footer {
     margin: 0;
     font-size: clamp(0.6rem, 4vw, 1rem);
     overflow: hidden;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 0;
+    margin: 0;
+    font-size: clamp(0.6rem, 4vw, 1rem);
+    overflow: hidden;
+    color: $lighter-color;
+    text-decoration: none;
   }
 }

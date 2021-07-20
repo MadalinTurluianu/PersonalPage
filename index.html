@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-
     <!-- // ---------------------------------- NAVIGATION -->
 
     <header>
@@ -24,7 +23,7 @@
 
     <!-- // ---------------------------------- HOME -->
 
-    <main class="content">
+    <main id="home" class="content">
       <div class="title">
         <h1>I’m Madalin Turluianu</h1>
         <h2>Front-end web developer</h2>
@@ -37,7 +36,7 @@
 
     <!-- // ---------------------------------- ABOUT -->
 
-    <section class="content about">
+    <section id="about" class="content">
       <div>
         <h2>About me</h2>
         <p>
@@ -50,12 +49,14 @@
         </p>
       </div>
 
-      <div class="img-container">img</div>
+      <div class="img-container">
+        <img src="./pictures/LA.jpg" alt="About image" />
+      </div>
     </section>
 
     <!-- // ---------------------------------- SKILLS -->
 
-    <section class="content skills">
+    <section id="skills" class="content">
       <div class="coding skills-set">
         <h2>Technical skills</h2>
         <div class="icons-container">
@@ -102,15 +103,36 @@
 
     <!-- // ---------------------------------- PROJECTS -->
 
-    <section class="content projects">
-
+    <section id="projects" class="content">
+      <h2>Projects</h2>
+      <div class="project budget">
+        <a
+          href="https://madalinturluianu.github.io/Budgeting-App/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./pictures/Budget-project.jpg" alt="Budget react project" />
+        </a>
+      </div>
     </section>
 
     <!-- // ---------------------------------- CONTACTS -->
-    
-    <footer>
-      <p class="contact">+40745490512</p>
+
+    <footer id="contacts">
+      <a href="tel:+40745490512">+40745490512</a>
       <p class="contact">turluianu.petre.madalin@gmail.com</p>
+      <a
+        href="https://www.linkedin.com/in/madalin-petre-turluianu-46a219209/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Linkedin</a
+      >
+      <a
+        href="https://www.upwork.com/o/profiles/users/~01620512608c8514c2/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Upwork</a
+      >
     </footer>
   </body>
 </html>
