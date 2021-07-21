@@ -70,3 +70,39 @@ function changeImageLoop() {
 changeImageLoop();
 
 setInterval(changeImageLoop, 18000);
+
+// Get my age and experience
+
+const ageSpan = document.querySelector(".myAge");
+const experienceSpan = document.querySelector(".experience");
+
+const birthDay = 25;
+const birthMonth = 5;
+const birthYear = 1998;
+
+const startCodingMonth = 7;
+const startCodingYear = 2020;
+
+let currentDay = new Date().getDate();
+let currentMonth = new Date().getMonth() + 1;
+let currentYear = new Date().getFullYear();
+console.log(currentYear);
+
+let myAge = "";
+
+if (currentMonth > birthMonth || currentMonth === birthMonth && currentDay >= birthDay) {
+  myAge = currentYear - birthYear;
+} else {
+  myAge = currentYear - birthYear - 1;
+}
+
+let yearsOfExperience = "";
+
+if (currentMonth >= startCodingMonth) {
+  yearsOfExperience = currentYear - startCodingYear;
+} else {
+  yearsOfExperience = currentYear - startCodingYear -1;
+}
+
+ageSpan.textContent = myAge.toString();
+experienceSpan.textContent = yearsOfExperience === 1 ? `1 year` : `${yearsOfExperience} years`;
