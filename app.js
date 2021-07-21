@@ -71,7 +71,7 @@ changeImageLoop();
 
 setInterval(changeImageLoop, 18000);
 
-// Get my age and experience
+// Get my age and experience and add it to about me paragraph
 
 const ageSpan = document.querySelector(".myAge");
 const experienceSpan = document.querySelector(".experience");
@@ -86,7 +86,6 @@ const startCodingYear = 2020;
 let currentDay = new Date().getDate();
 let currentMonth = new Date().getMonth() + 1;
 let currentYear = new Date().getFullYear();
-console.log(currentYear);
 
 let myAge = "";
 
