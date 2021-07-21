@@ -1,3 +1,5 @@
+// ---------------------------------- NAVIGATION
+
 const mobileNav = document.querySelector(".mobile-nav");
 const navMenuBars = mobileNav.querySelector(".nav-menu__bars");
 const navMenuBar = navMenuBars.querySelectorAll(".nav-menu__bar");
@@ -5,13 +7,12 @@ const navMenuOpen = mobileNav.querySelector(".nav-menu__open");
 const navMenuLinks = navMenuOpen.querySelectorAll("a");
 const backdrop = document.querySelector(".backdrop");
 
-// ---------------------------------- NAVIGATION
-
 // Make the navigation menu open when we click on it
 
 let mobileNavIsOpen = false;
 
-const displayFlex = "display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;"
+const displayFlex =
+  "display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;";
 
 navMenuBars.addEventListener("click", function () {
   if (!mobileNavIsOpen) {
@@ -26,17 +27,46 @@ navMenuBars.addEventListener("click", function () {
 });
 
 function closeMobileMenu() {
-    backdrop.classList.remove("backdrop-active");
-    backdrop.classList.add("backdrop-inactive");
-    mobileNav.classList.remove("nav-open");
-    mobileNav.classList.add("nav-close");
-    navMenuOpen.style.display = "none";
-    navMenuBars.style = displayFlex;
-    mobileNavIsOpen = false;
+  backdrop.classList.remove("backdrop-active");
+  backdrop.classList.add("backdrop-inactive");
+  mobileNav.classList.remove("nav-open");
+  mobileNav.classList.add("nav-close");
+  navMenuOpen.style.display = "none";
+  navMenuBars.style = displayFlex;
+  mobileNavIsOpen = false;
 }
 
-for (i = 0; i < navMenuLinks.length; i++) {
+for (let i = 0; i < navMenuLinks.length; i++) {
   navMenuLinks[i].addEventListener("click", closeMobileMenu);
 }
 
-backdrop.addEventListener("click", closeMobileMenu)
+backdrop.addEventListener("click", closeMobileMenu);
+
+// ---------------------------------- ABOUT
+
+const aboutImg = document.querySelector("#about img");
+
+// Make the picture change in loop
+
+const pictures = [
+  "LA",
+  "GrandCanyon",
+  "SanFrancisco",
+  "Sequoia",
+  "Philadelphia",
+  "NewYork",
+];
+
+function changeImage(img) {
+  aboutImg.src = `./pictures/${img}.jpg`;
+}
+
+function changeImageLoop() {
+  for (let i = 0; i < pictures.length; i++) {
+    setTimeout(changeImage.bind(pictures[i]), i * 3000, pictures[i]);
+  }
+}
+
+changeImageLoop();
+
+setInterval(changeImageLoop, 18000);
