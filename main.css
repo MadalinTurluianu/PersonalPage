@@ -4,6 +4,7 @@
 }
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,44 @@ body {
   background-color: #dfedf2;
   color: #011526;
   font-family: Rubik;
+}
+
+.backdrop-inactive {
+  display: none;
+}
+
+.backdrop-active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #013440;
+  opacity: 80%;
+  z-index: 5;
+}
+
+@keyframes nav-slide {
+  0% {
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.nav-open {
+  width: 50vw;
+  height: 100vh;
+  border-radius: 0;
+  animation: nav-slide 0.7s;
+}
+
+.nav-close {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transform: translate(0.5rem, -0.5rem);
 }
 
 .mobile-nav {
@@ -23,15 +62,10 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translate(0.5rem, -0.5rem);
   background-color: #038c8c;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
   z-index: 10;
 }
-
-.nav-menu__bars {
+.mobile-nav .nav-menu__bars {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,12 +76,28 @@ body {
   width: 1.8rem;
   height: 1.8rem;
 }
-
-.nav-menu__bar {
+.mobile-nav .nav-menu__bar {
   height: 3px;
   width: 100%;
   background-color: #013440;
   border-radius: 20px;
+}
+.mobile-nav .nav-menu__open {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.mobile-nav .nav-menu__open a {
+  color: #dfedf2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.desktop-nav {
+  display: none;
 }
 
 #home .title {
@@ -134,10 +184,16 @@ section h2 {
 #skills .languages h2 {
   padding-top: 1rem;
 }
+#skills .languages .icons-container {
+  margin-bottom: 1rem;
+}
 #skills h2 {
   margin-bottom: 2.5rem;
 }
 
+#projects {
+  margin-bottom: 6rem;
+}
 #projects .project {
   margin: 3rem auto;
   width: clamp(5rem, 60vw, 20rem);
@@ -156,6 +212,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -163,7 +220,14 @@ footer {
   color: #dfedf2;
   font-weight: bold;
 }
-footer a {
+footer .contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+footer .contact a {
   display: block;
   text-align: center;
   padding: 0.7rem 0;
@@ -172,6 +236,15 @@ footer a {
   overflow: hidden;
   color: #dfedf2;
   text-decoration: none;
+}
+footer .contact .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+}
+footer .contact img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

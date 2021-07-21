@@ -31,6 +31,7 @@ $mobile-img__diameter: clamp(5rem, 60vw, 20rem);
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,9 +39,52 @@ body {
   background-color: $lighter-color;
   color: $darker-color;
   font-family: Rubik;
+
+}
+
+.backdrop-inactive {
+  display: none;
+}
+
+.backdrop-active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $main-color3;
+  opacity: 80%;
+  z-index: 5;
 }
 
 // ---------------------------------- NAVIGATION BAR __ MOBILE
+
+// ---------------------------------- ANIMATIONS
+
+@keyframes nav-slide{
+  0% {
+    transform: translateX(50vw);
+  } 100% {
+    transform: translateX(0);
+  }
+}
+
+// ---------------------------------- STYLING 
+
+.nav-open {
+  width: 50vw;
+  height: 100vh;
+  border-radius: 0;
+  animation: nav-slide 0.7s;
+}
+
+.nav-close {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transform: translate(0.5rem, -0.5rem);
+}
 
 .mobile-nav {
   @include display-flex();
@@ -49,28 +93,43 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translate(0.5rem, -0.5rem);
   background-color: $main-color1;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
   z-index: 10;
+
+  .nav-menu__bars {
+    @include display-flex();
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  
+  .nav-menu__bar {
+    height: 3px;
+    width: 100%;
+    background-color: $main-color3;
+    border-radius: 20px;
+  }
+
+  .nav-menu__open {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  
+    a {
+      color: $lighter-color;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
 }
 
-.nav-menu__bars {
-  @include display-flex();
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-.nav-menu__bar {
-  height: 3px;
-  width: 100%;
-  background-color: $main-color3;
-  border-radius: 20px;
+.desktop-nav {
+  display: none;
 }
 
 // ---------------------------------- MAIN
@@ -178,8 +237,14 @@ section h2 {
 
   }
   
-  .languages h2 {
-    padding-top: 1rem;
+  .languages {
+
+    h2 {
+      padding-top: 1rem;
+    }
+    .icons-container {
+      margin-bottom: 1rem;
+    }
   }
 
   h2 {
@@ -190,6 +255,8 @@ section h2 {
 // ---------------------------------- PROJECTS
 
 #projects {
+
+  margin-bottom: 6rem;
 
   .project {
     margin: 3rem auto;
@@ -210,6 +277,7 @@ section h2 {
 footer {
   @include display-flex();
   flex-direction: column;
+  align-items: center;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -217,14 +285,30 @@ footer {
   color: $lighter-color;
   font-weight: bold;
 
-  a {
-    display: block;
-    text-align: center;
-    padding: 0.7rem 0;
-    margin: 0;
-    font-size: clamp(0.6rem, 4vw, 1rem);
-    overflow: hidden;
-    color: $lighter-color;
-    text-decoration: none;
+  .contact {
+    @include display-flex();
+    align-items: center;
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 0.7rem 0;
+      margin: 0;
+      font-size: clamp(0.6rem, 4vw, 1rem);
+      overflow: hidden;
+      color: $lighter-color;
+      text-decoration: none;
+    }
+
+    .icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: 0.3rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
