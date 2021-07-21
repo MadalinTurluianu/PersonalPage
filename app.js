@@ -30,9 +30,9 @@ function closeMobileMenu() {
     backdrop.classList.add("backdrop-inactive");
     mobileNav.classList.remove("nav-open");
     mobileNav.classList.add("nav-close");
-    mobileNavIsOpen = false;
     navMenuOpen.style.display = "none";
     navMenuBars.style = displayFlex;
+    mobileNavIsOpen = false;
 }
 
 for (i = 0; i < navMenuLinks.length; i++) {
