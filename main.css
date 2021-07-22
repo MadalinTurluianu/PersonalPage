@@ -98,6 +98,10 @@ body {
   font-weight: bold;
   font-size: clamp(0.8rem, 5vw, 1.2rem);
 }
+.mobile-nav .nav-menu__open a:hover,
+.mobile-nav .nav-menu__open a:focus {
+  color: #011526;
+}
 
 .desktop-nav {
   display: none;
@@ -193,13 +197,14 @@ section h2 {
   margin-bottom: 1rem;
 }
 #skills h2 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 #projects {
   margin-bottom: 6rem;
 }
 #projects .project {
+  position: relative;
   margin: 3rem auto;
   width: clamp(5rem, 60vw, 20rem);
   height: clamp(5rem, 60vw, 20rem);
@@ -209,6 +214,36 @@ section h2 {
 #projects .project img {
   width: 100%;
   height: 100%;
+}
+#projects .cover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 20%;
+  top: 0;
+  left: 0;
+  background-color: #013440;
+  height: 100%;
+  width: 100%;
+  opacity: 90%;
+  transform: translateX(100%);
+  transition: transform 0.4s;
+}
+#projects .cover p {
+  color: #dfedf2;
+  text-align: center;
+  font-size: clamp(0.6rem, 4vw, 1.2rem);
+  font-weight: bold;
+  text-shadow: 8px 8px 2px #013440;
+}
+#projects .project img:hover + .cover,
+#projects .cover:hover,
+#projects .cover p:hover {
+  transform: translateX(0%);
 }
 
 footer {
@@ -242,9 +277,13 @@ footer .contact a {
   color: #dfedf2;
   text-decoration: none;
 }
+footer .contact a:hover,
+footer .contact a:focus {
+  color: #011526;
+}
 footer .contact .icon {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: clamp(1rem, 5vw, 1.2rem);
+  height: clamp(1rem, 5vw, 1.2rem);
   margin-right: 0.3rem;
 }
 footer .contact img {

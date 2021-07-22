@@ -128,6 +128,11 @@ body {
       font-weight: bold;
       font-size: clamp(0.8rem, 5vw, 1.2rem);
     }
+
+    a:hover,
+    a:focus {
+      color: $darker-color;
+    }
   }
 }
 
@@ -241,7 +246,7 @@ section h2 {
 
 
   }
-  
+
   .languages {
 
     h2 {
@@ -253,7 +258,7 @@ section h2 {
   }
 
   h2 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -264,6 +269,7 @@ section h2 {
   margin-bottom: 6rem;
 
   .project {
+    position: relative;
     margin: 3rem auto;
     width: $mobile-img__diameter;
     height: $mobile-img__diameter;
@@ -274,6 +280,36 @@ section h2 {
       width: 100%;
       height: 100%;
     }
+  }
+
+  .cover {
+    @include display-flex();
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 20%;
+    top: 0;
+    left: 0;
+    background-color: $main-color3;
+    height: 100%;
+    width: 100%;
+    opacity: 90%;
+    transform: translateX(100%);
+    transition: transform 0.4s;
+
+    p {
+      color: $lighter-color;
+      text-align: center;
+      font-size: clamp(0.6rem, 4vw, 1.2rem);
+      font-weight: bold;
+      text-shadow: 8px 8px 2px $main-color3;
+    }
+  }
+
+  .project img:hover + .cover,
+  .cover:hover,
+  .cover p:hover{
+    transform: translateX(0%);
   }
 }
 
@@ -305,9 +341,14 @@ footer {
       text-decoration: none;
     }
 
+    a:hover,
+    a:focus {
+      color: $darker-color;
+    }
+
     .icon {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: clamp(1rem, 5vw, 1.2rem);
+      height: clamp(1rem, 5vw, 1.2rem);
       margin-right: 0.3rem;
     }
 
