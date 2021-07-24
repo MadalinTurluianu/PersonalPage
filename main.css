@@ -39,7 +39,7 @@ body {
   }
 }
 .nav-open {
-  width: 50vw;
+  width: 40vw;
   height: 100vh;
   border-radius: 0;
   animation: nav-slide 0.7s;
@@ -237,7 +237,6 @@ section h2 {
   color: #dfedf2;
   text-align: center;
   font-size: clamp(0.6rem, 4vw, 1.2rem);
-  font-weight: bold;
   text-shadow: 8px 8px 2px #013440;
 }
 #projects .project img:hover + .cover,

@@ -73,7 +73,7 @@ body {
 // ---------------------------------- STYLING 
 
 .nav-open {
-  width: 50vw;
+  width: 40vw;
   height: 100vh;
   border-radius: 0;
   animation: nav-slide 0.7s;
@@ -301,7 +301,6 @@ section h2 {
       color: $lighter-color;
       text-align: center;
       font-size: clamp(0.6rem, 4vw, 1.2rem);
-      font-weight: bold;
       text-shadow: 8px 8px 2px $main-color3;
     }
   }
