@@ -26,7 +26,7 @@ $mobile-img__diameter: clamp(5rem, 60vw, 20rem);
   display: flex;
 }
 
-// ---------------------------------- PAGE STYLING
+// ---------------------------------- PAGE STYLING 
 
 * {
   box-sizing: border-box;
@@ -189,7 +189,7 @@ section h2 {
 #about {
   p {
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 0 clamp(1rem, 3vw, 3rem);
     text-align: justify;
     color: $main-color3;
     font-size: clamp(0.8rem, 4.5vw, 1rem);
@@ -233,8 +233,8 @@ section h2 {
     .mini-icon {
       position: absolute;
       transform: translate(
-        clamp(1rem, 2.6vw, 3rem),
-        clamp(-1rem, -2.6vw, -3rem)
+        clamp(1rem, 2.6vw, 2.1rem),
+        clamp(-1rem, -2.6vw, -2.1rem)
       );
       top: 0;
       right: 0;
@@ -272,7 +272,6 @@ section h2 {
 
     img {
       width: 100%;
-      height: 100%;
     }
   }
 
@@ -353,6 +352,27 @@ footer {
 }
 
 @media (min-width: 1000px) {
+
+  .content-container {
+
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .content {
+    @include display-flex();
+    align-items: center;
+    justify-content: space-around;
+    height: 85vh;
+    width: clamp(1px, 100%, 100rem);
+    margin: auto;
+    padding: 10vw 2rem 0 2rem;
+    scroll-snap-align: start;
+  }
+
   // ---------------------------------- NAVIGATION BAR __ DESKTOP
 
   .mobile-nav {
@@ -368,10 +388,10 @@ footer {
     left: 0;
     background-color: $main-color1;
     z-index: 10;
-    width: 100vw;
+    width: 100%;
     height: 3rem;
     border-radius: 0;
-    padding: 0 2rem;
+    padding: 0 clamp(2rem, 10vw, 10vw);
 
     a {
       color: $lighter-color;
@@ -391,6 +411,8 @@ footer {
   // ---------------------------------- MAIN
 
   #home {
+
+
     .title {
       padding-top: 0;
     }
@@ -400,6 +422,7 @@ footer {
       height: auto;
       border-radius: 5px;
       box-shadow: 0px 3px 8px $main-color3;
+      margin: 0;
 
       img {
         display: block;
@@ -409,15 +432,6 @@ footer {
   }
 
   // ---------------------------------- SECTIONS
-
-  .content {
-    @include display-flex();
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    width: 100vw;
-    padding: 3rem 2rem;
-  }
 
   section h2 {
     padding-top: 0;
@@ -448,4 +462,67 @@ footer {
       }
     }
   }
+
+  // ---------------------------------- SKILLS
+
+  #skills {
+    align-items: flex-start;
+    padding-top: 25vh;
+
+    .icons-container {
+      width: 40vw;
+      max-width: 30rem;
+    }
+
+    .icon-container {
+      width: clamp(3rem, 15vw, 6rem);
+      height: clamp(3rem, 15vw, 6rem);
+    }
+
+    .languages {
+      h2 {
+        padding-top: 0;
+      }
+    }
+  }
+
+  // ---------------------------------- PROJECTS
+
+#projects {
+  margin-bottom: 6rem;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 6rem;
+  }
+
+  .projects {
+    @include display-flex();
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .project {
+    margin: 0;
+    width: clamp(18rem, 25vw, 22rem);
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 3px 8px $main-color3;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+// ---------------------------------- CONTACTS
+
+footer {
+  @include display-flex();
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 0;
+  scroll-snap-align: start;
+}
 }

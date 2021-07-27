@@ -37,148 +37,160 @@
       </nav>
     </header>
 
-    <!-- // ---------------------------------- HOME -->
+    <div class="content-container">
+      <!-- // ---------------------------------- HOME -->
 
-    <main id="home" class="content">
-      <div class="title">
-        <h1>I’m Madalin Turluianu</h1>
-        <h2>Front-end web developer</h2>
-      </div>
+      <main id="home" class="content">
+        <div class="title">
+          <h1>I’m Madalin Turluianu</h1>
+          <h2>Front-end web developer</h2>
+        </div>
 
-      <div class="main-image">
-        <img src="./pictures/mainImage.jpg" alt="Profile Picture" />
-      </div>
-    </main>
+        <div class="main-image">
+          <img src="./pictures/mainImage.jpg" alt="Profile Picture" />
+        </div>
+      </main>
 
-    <!-- // ---------------------------------- ABOUT -->
+      <!-- // ---------------------------------- ABOUT -->
 
-    <section id="about" class="content">
-      <div>
-        <h2>About me</h2>
-        <p>
-          Hi, first of all, thank you for visiting my page.
-          My name is Madalin, I'm <span class="myAge"></span> years old and I have a great passion for coding.
-          I have <span class="experience"></span> of experience and I really enjoy developing and learning new things every day.
-          I like working in a team and communicate with others, but this doesn't mean I can't take a project by myself if the situation requires it.
-          I always do my best to deliver the best results. 
-          But hey, life is not just about work right?
-          During the week I like to go to the gym to take a break.
-          In my days off I like to swim, ski and visit new places with my friends or family.
-        </p>
-      </div>
+      <section id="about" class="content">
+        <div>
+          <h2>About me</h2>
+          <p>
+            Hi, first of all, thank you for visiting my page. My name is
+            Madalin, I'm <span class="myAge"></span> years old and I have a
+            great passion for coding. I have <span class="experience"></span> of
+            experience and I really enjoy developing and learning new things
+            every day. I like working in a team and communicate with others, but
+            this doesn't mean I can't take a project by myself if the situation
+            requires it. I always do my best to deliver the best results. But
+            hey, life is not just about work right? During the week I like to go
+            to the gym to take a break. In my days off I like to swim, ski and
+            visit new places with my friends or family.
+          </p>
+        </div>
 
-      <div class="img-container">
-        <img src="./pictures/LA.jpg" alt="About image" />
-      </div>
-    </section>
+        <div class="img-container">
+          <img src="./pictures/LA.jpg" alt="About image" />
+        </div>
+      </section>
 
-    <!-- // ---------------------------------- SKILLS -->
+      <!-- // ---------------------------------- SKILLS -->
 
-    <section id="skills" class="content">
-      <div class="coding skills-set">
-        <h2>Technical skills</h2>
-        <div class="icons-container">
-          <div class="icon-container">
-            <img src="Icons/Blue-HTML.png" alt="HTML" />
+      <section id="skills" class="content">
+        <div class="coding skills-set">
+          <h2>Technical skills</h2>
+          <div class="icons-container">
+            <div class="icon-container">
+              <img src="Icons/Blue-HTML.png" alt="HTML" />
+            </div>
+            <div class="icon-container">
+              <img src="Icons/Blue-CSS.png" alt="CSS" />
+              <img class="mini-icon" src="Icons/Blue-SASS.png" alt="SASS" />
+            </div>
+            <div class="icon-container">
+              <img src="Icons/Blue-JS.png" alt="JS" />
+              <img class="mini-icon" src="Icons/Blue-REACT.png" alt="REACT" />
+            </div>
           </div>
-          <div class="icon-container">
-            <img src="Icons/Blue-CSS.png" alt="CSS" />
-            <img class="mini-icon" src="Icons/Blue-SASS.png" alt="SASS" />
-          </div>
-          <div class="icon-container">
-            <img src="Icons/Blue-JS.png" alt="JS" />
-            <img class="mini-icon" src="Icons/Blue-REACT.png" alt="REACT" />
+          <div class="icons-container">
+            <div class="icon-container">
+              <img src="Icons/Blue-GIT.png" alt="GIT" />
+            </div>
+            <div class="icon-container">
+              <img src="Icons/Blue-GITHUB.png" alt="GITHUB" />
+            </div>
+            <div class="icon-container">
+              <img src="Icons/Blue-CMD.png" alt="CMD" />
+            </div>
           </div>
         </div>
-        <div class="icons-container">
-          <div class="icon-container">
-            <img src="Icons/Blue-GIT.png" alt="GIT" />
-          </div>
-          <div class="icon-container">
-            <img src="Icons/Blue-GITHUB.png" alt="GITHUB" />
-          </div>
-          <div class="icon-container">
-            <img src="Icons/Blue-CMD.png" alt="CMD" />
-          </div>
-        </div>
-      </div>
 
-      <div class="languages skills-set">
-        <h2>Languages</h2>
-        <div class="icons-container">
-          <div class="icon-container">
-            <img src="Icons/Blue-Italian.png" alt="Italian" />
+        <div class="languages skills-set">
+          <h2>Languages</h2>
+          <div class="icons-container">
+            <div class="icon-container">
+              <img src="Icons/Blue-Italian.png" alt="Italian" />
+            </div>
+            <div class="icon-container">
+              <img src="Icons/Blue-Romanian.png" alt="Romanian" />
+            </div>
+            <div class="icon-container">
+              <img src="Icons/Blue-English.png" alt="English" />
+            </div>
           </div>
-          <div class="icon-container">
-            <img src="Icons/Blue-Romanian.png" alt="Romanian" />
+        </div>
+      </section>
+
+      <!-- // ---------------------------------- PROJECTS -->
+
+      <section id="projects" class="content">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project budget">
+            <a
+              href="https://madalinturluianu.github.io/Budgeting-App/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./pictures/Budget-project.jpg"
+                alt="Budget react project"
+              />
+              <div class="cover">
+                <p>
+                  A React project for tracking all your expenses. It's already
+                  functional, but it's still work in progress.
+                </p>
+              </div>
+            </a>
           </div>
-          <div class="icon-container">
-            <img src="Icons/Blue-English.png" alt="English" />
+        </div>
+      </section>
+
+      <!-- // ---------------------------------- CONTACTS -->
+
+      <footer id="contacts">
+        <div class="contact">
+          <div class="icon">
+            <img src="./Icons/White-PHONE.png" alt="PHONE" />
           </div>
+          <a href="tel:+40745490512">+40745490512</a>
         </div>
-      </div>
-    </section>
-
-    <!-- // ---------------------------------- PROJECTS -->
-
-    <section id="projects" class="content">
-      <h2>Projects</h2>
-      <div class="project budget">
-        <a
-          href="https://madalinturluianu.github.io/Budgeting-App/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./pictures/Budget-project.jpg" alt="Budget react project" />
-          <div class="cover">
-            <p>A React project for tracking all your expenses. It's already functional, but it's still work in progress.</p>
+        <div class="contact">
+          <div class="icon">
+            <img src="./Icons/White-MAIL.png" alt="MAIL" />
           </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- // ---------------------------------- CONTACTS -->
-
-    <footer id="contacts">
-      <div class="contact">
-        <div class="icon">
-          <img src="./Icons/White-PHONE.png" alt="PHONE">
+          <a
+            href="mailto:turluianu.petre.madalin@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >turluianu.petre.madalin@gmail.com</a
+          >
         </div>
-        <a href="tel:+40745490512">+40745490512</a>
-      </div>
-      <div class="contact">
-        <div class="icon">
-          <img src="./Icons/White-MAIL.png" alt="MAIL">
+        <div class="contact">
+          <div class="icon">
+            <img src="./Icons/White-LinkedIn.png" alt="LINKEDIN" />
+          </div>
+          <a
+            href="https://www.linkedin.com/in/madalin-petre-turluianu-46a219209/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
         </div>
-        <a
-          href="mailto:turluianu.petre.madalin@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          >turluianu.petre.madalin@gmail.com</a
-        >
-      </div>
-      <div class="contact">
-        <div class="icon">
-          <img src="./Icons/White-LinkedIn.png" alt="LINKEDIN">
+        <div class="contact">
+          <div class="icon">
+            <img src="./Icons/White-Upwork.png" alt="UPWORK" />
+          </div>
+          <a
+            href="https://www.upwork.com/o/profiles/users/~01620512608c8514c2/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Upwork</a
+          >
         </div>
-        <a
-          href="https://www.linkedin.com/in/madalin-petre-turluianu-46a219209/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >LinkedIn</a
-        >
-      </div>
-      <div class="contact">
-        <div class="icon">
-          <img src="./Icons/White-Upwork.png" alt="UPWORK">
-        </div>
-        <a
-          href="https://www.upwork.com/o/profiles/users/~01620512608c8514c2/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Upwork</a
-        >
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
