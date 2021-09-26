@@ -26,7 +26,7 @@ $mobile-img__diameter: clamp(5rem, 60vw, 20rem);
   display: flex;
 }
 
-// ---------------------------------- PAGE STYLING 
+// ---------------------------------- PAGE STYLING
 
 * {
   box-sizing: border-box;
@@ -352,9 +352,7 @@ footer {
 }
 
 @media (min-width: 1000px) {
-
   .content-container {
-
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
@@ -411,8 +409,6 @@ footer {
   // ---------------------------------- MAIN
 
   #home {
-
-
     .title {
       padding-top: 0;
     }
@@ -488,41 +484,42 @@ footer {
 
   // ---------------------------------- PROJECTS
 
-#projects {
-  margin-bottom: 6rem;
-  flex-direction: column;
-  justify-content: center;
-
-  h2 {
+  #projects {
     margin-bottom: 6rem;
-  }
+    flex-direction: column;
+    justify-content: center;
 
-  .projects {
-    @include display-flex();
-    justify-content: space-around;
-    align-items: center;
-  }
+    h2 {
+      margin-bottom: 6rem;
+    }
 
-  .project {
-    margin: 0;
-    width: clamp(18rem, 25vw, 22rem);
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 3px 8px $main-color3;
+    .projects {
+      @include display-flex();
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
 
-    img {
-      display: block;
+    .project {
+      margin: 0;
+      width: clamp(18rem, 25vw, 22rem);
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0px 3px 8px $main-color3;
+
+      img {
+        display: block;
+      }
     }
   }
-}
 
-// ---------------------------------- CONTACTS
+  // ---------------------------------- CONTACTS
 
-footer {
-  @include display-flex();
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 1rem 0;
-  scroll-snap-align: start;
-}
+  footer {
+    @include display-flex();
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0;
+    scroll-snap-align: start;
+  }
 }
